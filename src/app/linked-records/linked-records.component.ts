@@ -24,7 +24,6 @@ export class LinkedRecordsComponent {
 
     broadCastChannel.onmessage = (event) => {
       this.recordId = Number(event.data);
-      console.log(this.recordId);
       this.linkedRecords$ = this.recordService.getLinkedRecords(this.recordId);
       cdRef.detectChanges();
     }
