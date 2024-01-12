@@ -1,0 +1,9 @@
+<div *ngIf="record$ | async as record">
+    id: {{ record.id }}
+    <br>
+    name: {{ record.name }}
+    <br>
+    description {{ record.description }}
+    <br>
+    <a [routerLink]="['/linked-records', recordId]">Linked Records</a>
+</div>

@@ -1,0 +1,10 @@
+<ul *ngIf="linkedRecords$ | async as linkedRecords">
+    <h1>Records linked to record {{ recordId }}</h1>
+    <li *ngFor="let linkedRecord of linkedRecords">
+        id: {{ linkedRecord.id }}
+        <br>
+        recordId: {{ linkedRecord.recordId }}
+        <br>
+        name: {{ linkedRecord.name }}
+    </li>
+</ul>
